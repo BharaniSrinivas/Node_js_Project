@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
-ENV DOMAIN="http://34.229.76.1:3000" \
-PORT=3000 \
+ENV DOMAIN="http://34.229.76.1:8000" \
+PORT=8000 \
 STATIC_DIR="./client" \
 
 PUBLISHABLE_KEY="pk_test_51L5AsSSCC8JVWfvgEtfJkzHMTh7Z5PLY5m1yhR379sJgwAVZEe13NaiG33wsHSyHnPJMjTNOosiPk6AeMI8q0ims0049IKffiu"\
@@ -15,7 +15,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8000
 
 CMD ["node", "server.js"]
 
